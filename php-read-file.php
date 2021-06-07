@@ -1,7 +1,8 @@
 <?php
 function readfile001($fname){
-$c = fread($fname,filesize($fname));
-fclose($fname);
+  $f = fopen($fname,"r");
+$c = fread($f,filesize($fname));
+fclose($f);
 return $c;
 }
 ?>
